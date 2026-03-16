@@ -2,9 +2,12 @@ NETFLIX_GPT
 
 
 Features -
--Login/singUp
+-Header
+-Routing App
+-Login
    -SignIn/SignUp form
-   -redirect to browse page
+    -Form Validation
+    -Use ref hook
 
 Browse
  -Header
