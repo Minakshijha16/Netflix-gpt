@@ -2,6 +2,9 @@ import Header from "./Header";
 import Background from "../assets/Background.jpg"
 import { useState,useRef } from "react";
 import { ValidateData } from "../utils/Validate";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/Firebase";
+
 const Login = () => {
     const [isSignIn, setisSignIn] = useState(true);
     const [errorMessage, setErrorMessage] = useState(null);
@@ -13,6 +16,38 @@ const Login = () => {
     
         const message = isSignIn ? ValidateData(email.current.value, password.current.value) : ValidateData(email.current.value, password.current.value, name.current.value)
         setErrorMessage(message);
+        if (message) return;
+        if (!isSignIn) {
+            createUserWithEmailAndPassword(auth, email.current.value, password.current.value )
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log(user);
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setErrorMessage(errorCode + "-" + errorMessage);
+                });
+            
+        } 
+
+        else {
+            
+            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log(user);
+                  
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setErrorMessage(errorCode + "-" + errorMessage);
+                });
+
+        }
+        
+        
     
      }
 

@@ -8,6 +8,9 @@ Features -
    -SignIn/SignUp form
     -Form Validation
     -Use ref hook
+    -firebase setup
+    -deploying our app to production
+    -create sign up user account
 
 Browse
  -Header
