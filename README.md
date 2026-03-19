@@ -11,6 +11,10 @@ Features -
     -firebase setup
     -deploying our app to production
     -create sign up user account
+    -Authentication for signIN and Sign Up
+    -Created store with userSlice
+    -sign out feature done
+    -updated profile
 
 Browse
  -Header
