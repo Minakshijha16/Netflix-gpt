@@ -5,14 +5,12 @@ import { ValidateData } from "../utils/Validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
     const [isSignIn, setisSignIn] = useState(true);
     const [errorMessage, setErrorMessage] = useState(null);
-    const navigate = useNavigate();
     const email = useRef(null);
     const password = useRef(null);
     const name = useRef(null);
@@ -27,13 +25,12 @@ const Login = () => {
             createUserWithEmailAndPassword(auth, email.current.value, password.current.value )
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log(user);
                     updateProfile(user, {
                         displayName: name.current.value
                     }).then(() => {   
                         const { uid, email, displayName } = auth.currentUser;
                         dispatch(addUser({ email: email, uid: uid, displayName: displayName, }));
-                    navigate("/browse")
+                    
                     }).catch((error) => {
                      setErrorMessage(error.message)   
                     });
@@ -52,8 +49,8 @@ const Login = () => {
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log(user);
-                    navigate("/browse");
+                   
+                    
                   
                 })
 
@@ -85,7 +82,7 @@ const Login = () => {
                 <input ref={password} type="Password" placeholder="Password" className="p-4 my-4 w-full bg-gray-700 "></input>
                 <p className="text-red-700">{errorMessage }</p>
                 <button onClick={CheckinputData} className="p-4 my-6 bg-red-700 w-full font-semibold text-lg rounded-lg">{isSignIn ? "Sign In" : "Sign Up"}</button>
-                <p className="py-4 " onClick={ToggleSignForm}>{ isSignIn? "New to Netflix? Sign Up Now": "Already a user? Sign In Now"}</p>
+                <p className="py-4 cursor-pointer" onClick={ToggleSignForm}>{ isSignIn? "New to Netflix? Sign Up Now": "Already a user? Sign In Now"}</p>
 
             </form>
     

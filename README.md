@@ -15,14 +15,17 @@ Features -
     -Created store with userSlice
     -sign out feature done
     -updated profile
-
+    -bugfix: if user explicitly tries to go on /browse page without login redirect him/her to login page vice versa
+    -unsubscribe to onauthstatechange when component unmounts 
+    
 Browse
  -Header
- -Main Movie
-    -Tailer in Background
-    -Title & Description
-    -Movie Suggestions
-       -MovieLists
+ -Main Container- main movie in background
+    -get movies api from tmdb
+    -build video title and background video
+    -Main container done 
+ - Secondary Container
+   - 
 
 gpt
 -Search bar
@@ -34,3 +37,4 @@ Roadmap
 -Login form
   -Sing In form
   -Sign Up form
+  -sign out form
