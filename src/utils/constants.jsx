@@ -5,3 +5,5 @@ export const API_OPTIONS = {
         accept: 'application/json'
     }
 };
+
+export const CDN_URL = "https://image.tmdb.org/t/p/w500/"
