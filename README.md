@@ -17,6 +17,7 @@ Features -
     -updated profile
     -bugfix: if user explicitly tries to go on /browse page without login redirect him/her to login page vice versa
     -unsubscribe to onauthstatechange when component unmounts 
+    -
     
 Browse
  -Header
@@ -25,11 +26,16 @@ Browse
     -build video title and background video
     -Main container done 
  - Secondary Container
-   - 
+   - fetch api from tmdb
+   -create custom hooks for each type of movie
+   - build movie list 
+   - build movie cards
+   - secondary component is done
 
 gpt
--Search bar
--movie suggestions
+-Search bar created 
+-Animated background added
+
 
 
 Roadmap
