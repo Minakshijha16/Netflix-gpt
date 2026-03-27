@@ -35,7 +35,7 @@ Browse
 gpt
 -Search bar created 
 -Animated background added
-
+-multilingual feature added in gpt
 
 
 Roadmap
