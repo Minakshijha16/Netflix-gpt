@@ -144,7 +144,5 @@ npx firebase-tools deploy --only hosting
 ---
 
 ## 🙏 Credits
-
-- Built with reference from [Namaste React](https://github.com/akshaymarch7/netflix-gpt) by Akshay Saini
 - Movie data from [TMDB API](https://www.themoviedb.org/)
-- AI powered by [Google Gemini](https://ai.google.dev/)
+- AI powered by [Google Gemini](https://ai.google.dev/)
