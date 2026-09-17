@@ -4,7 +4,7 @@ import Galaxy from "./Galaxy";
 
 const GptSearch = () => {
     return (
-        <div className="relative w-full h-screen bg-black overflow-hidden">           
+        <div className="relative w-full min-h-screen bg-black overflow-hidden">           
             <div className="absolute inset-0 z-0">
                 <Galaxy
                     mouseRepulsion
@@ -24,7 +24,7 @@ const GptSearch = () => {
          
             <div className="absolute inset-0 bg-black/50 pointer-events-none z-10"></div>
           
-            <div className="relative z-20 flex flex-col items-center pt-20">
+            <div className="relative z-20 flex flex-col items-center pt-20 pb-10 px-4 overflow-y-auto min-h-screen">
                 <GptSearchBar />
                 <GptMovieSuggestion />
             </div>
@@ -33,4 +33,4 @@ const GptSearch = () => {
     );
 };
 
-export default GptSearch;
+export default GptSearch;

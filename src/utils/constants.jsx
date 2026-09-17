@@ -8,3 +8,6 @@ export const API_OPTIONS = {
 
 export const CDN_URL = "https://image.tmdb.org/t/p/w500/"
 export const Supported_languages = [{ identifier: "English", name: "English" }, { identifier: "Hindi", name: "Hindi" }, { identifier: "Spanish", name: "Spanish" }, { identifier: "Maithili", name: "Maithili" }, { identifier: "Bangla", name: "Bangla" }];
+
+// Add your Gemini API key here or use import.meta.env.VITE_GEMINI_KEY
+export const GEMINI_KEY = import.meta.env.VITE_GEMINI_KEY || "";
