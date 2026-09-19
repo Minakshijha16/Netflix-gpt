@@ -2,11 +2,8 @@
 
 A Netflix-inspired movie browsing app powered by **Google Gemini AI** for smart movie recommendations, built with React, Redux Toolkit, Tailwind CSS, Firebase, and TMDB API.
 
-## 🌐 Live Demo
 
-**[https://netflix-gpt-2309a.web.app](https://netflix-gpt-2309a.web.app)**
 
----
 
 ## ✨ Features
 
